@@ -1,0 +1,31 @@
+
+python
+# Import necessary libraries
+from flask import Flask, render_template, request, redirect, url_for
+
+# Create a Flask app
+app = Flask(__name__)
+
+# Define the main route
+@app.route('/')
+def index():
+return render_template('index.html')
+
+# Define the route for generating the vacation plan
+@app.route('/generate', methods=['POST'])
+def generate():
+# Get the user input from the form
+destination = request.form.get('destination')
+budget = request.form.get('budget')
+duration = request.form.get('duration')
+
+# Generate the vacation plan based on the user input
+# This could involve complex logic and calculations based on the user's preferences and constraints
+
+# Render the vacation plan page with the generated itinerary
+return render_template('vacation_plan.html', destination=destination, budget=budget, duration=duration)
+
+# Run the Flask app
+if __name__ == '__main__':
+app.run(debug=True)
+
