@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exotic Vacation Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+<h1>Exotic Vacation Planner</h1>
+
+<form action="/generate" method="POST">
+<label for="destination">Destination:</label>
+<input type="text" name="destination" id="destination">
+
+<label for="budget">Budget:</label>
+<input type="number" name="budget" id="budget">
+
+<label for="duration">Duration (in days):</label>
+<input type="number" name="duration" id="duration">
+
+<input type="submit" value="Generate Vacation Plan">
+</form>
+</div>
+</body>
+
+</html>
+
+
